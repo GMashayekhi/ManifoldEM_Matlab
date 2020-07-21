@@ -11,23 +11,29 @@ If ManifoldEM is useful in your work, please cite the papers 1 & 2.
 
 
 Overview
+
 The software needs the Cryo-EM snapshots (aligned particle images) with the assigned orientations and defocus values (alignment file). For the preprocessing of the data and extracting the orientations and related parameters any software could be used. In this repository, a MATLAB function (getStarFile.m) is provided to extract the information from the .star file and put it in the appropriate format of ManifoldEM. As for the image stack the default setting is for .mrcs files. But such files/settings could be developed for any other data format to make the software compatible with.
 
 Over the years, the MATLAB codes were developed in different MATLAB versions. The  current distribution has been tested with MATLAB 2015b and 2019a 64 bit. Some functions used in ManifoldEM were part of standard MATLAB 2015, but moved to special toolboxes in the later versions. 
 
 Known Issues
+
 Please note that there are some issues in the current ManifoldEM software, which are not yet fully resolved as of this release of MATLAB code (1.0.0) as follows:
 
--	Hyper parameter tuning:
+-	Hyper parameter tuning
+
 There are multiple parameters being used in the ManifoldEM software. We have tried to come up with the set of parameters which works for most of the datasets. But further tuning of the parameters might give better results.
 
--	Automatic Outlier removal:
+-	Automatic Outlier removal
+
 In some datasets, some outliers might appear in the manifolds which could affect the quality of conformational movies. Currently an automatic method is implemented which removes some of the outliers. But in some cases, we might need to remove the outliers manually (For more details refer to the tutorial).
 
--	Boundary Problem:
+-	Boundary Problem
+
 Overestimation of the occupancies near the boundaries of the occupancy map have been observed. So, the occupancies for up to 5% of the bins from the two ends of the conformational coordinate might not be reliable.
 
--	Propagation of 2D conformational coordinates across the whole S2:
+-	Propagation of 2D conformational coordinates across the whole S2
+
 In manifoldEM, first the 2D conformational changes are extracted in each viewing angle (projection direction), then they are mapped to 3D conformational changes. To do so, the conformational changes along the eigenfunctions of the manifold are extracted. Then the coordinates (CC) representing the similar motions from all projection directions are used to generate the 3D conformational movie. If there is one dominant and large conformational motion going on, this motion is most likely to be captured by the first eigenfunction of the manifold. But if there are subtle changes happening and/or there are more than one conformational coordinate or some other artifacts, the order of the eigenfunctions ranked according to the eigenvalue may be different in different projection directions. Also, the sense of the conformational changes may change due to sense-neutrality in eigen-decomposition. In these cases, we have following issues, which makes the propagation difficult:
 
 •	Duplicate CCs
