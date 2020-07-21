@@ -11,7 +11,6 @@ If ManifoldEM is useful in your work, please cite the papers 1 & 2.
 
 
 Overview
-
 The software needs the Cryo-EM snapshots (aligned particle images) with the assigned orientations and defocus values (alignment file). For the preprocessing of the data and extracting the orientations and related parameters any software could be used. In this repository, a MATLAB function (getStarFile.m) is provided to extract the information from the .star file and put it in the appropriate format of ManifoldEM. As for the image stack the default setting is for .mrcs files. But such files/settings could be developed for any other data format to make the software compatible with.
 
 Over the years, the MATLAB codes were developed in different MATLAB versions. The  current distribution has been tested with MATLAB 2015b and 2019a 64 bit. Some functions used in ManifoldEM were part of standard MATLAB 2015, but moved to special toolboxes in the later versions. 
