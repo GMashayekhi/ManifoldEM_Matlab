@@ -55,7 +55,6 @@ if exist([dir,'/Data'],'dir')==0
 end
 Met='S2'
 save([dir,'/Data/S2tessellationResult.mat'],'nG','CG','ApertureSize','Met')
-disp('Done')
 
 if visual==1
     figure('Color',[1 1 1]);
@@ -73,4 +72,5 @@ if visual==1
     colorbar;%(handles.axes1,'caxis',[lmin lmax])
     caxis([lmin lmax]);
 end
+disp('Done')
 end
