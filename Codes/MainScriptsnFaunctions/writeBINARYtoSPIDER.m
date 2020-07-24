@@ -21,8 +21,8 @@ fil=[dir,'/Data/starFile.mat'];
 load(fil,'q')
 
 qq=q;
-numimbin=zeros(1,50);
-indsinbin=cell(1,50);
+numimbin=zeros(1,nClass);
+indsinbin=cell(1,nClass);
 indsinbin(1,:)={0};
 %
             
@@ -56,7 +56,7 @@ switch pcase
                     q = q(:,conOrder:nS-conOrder-1);
                 end
                 
-                for bin = 1:50
+                for bin = 1:nClass
                    
                     ind1 = (bin-1)/nClass;
                     ind2 = bin/nClass;
@@ -96,7 +96,7 @@ switch pcase
       
     case 2
         
-        for j=[1:50]
+        for j=[1:nClass]
            
             fIn = [dir,'/Dat/qs','_',num2str(j),'_of_',int2str(nClass),'.dat'];
             fid = fopen(fIn,'r');
@@ -119,15 +119,14 @@ switch pcase
                 [phi(i), theta(i), psi(i)] = q2Spider(Qr,0);
             end     
            
-%             align = [psi' theta' phi'];%used this
-            align = [psi' theta' phi'];%used this
+            align = [psi' theta' phi'];
             name = [dir,'/Dat/align_',num2str(j,'%02d'),'.dat'];
             writeSPIDERdoc(name, align);
-            save([dir,'/Dat/EulerAngs',num2str(j,'%02d'),'.mat'],'qs','phi','theta','psi');
+            %save([dir,'/Dat/EulerAngs',num2str(j,'%02d'),'.mat'],'qs','phi','theta','psi');
         end
       
     case 3
-        for j=[1:50]
+        for j=[1:nClass]
             fIn = [dir,'/Dat/NLSAImage','_',num2str(j),'_of_',int2str(nClass),'.dat'];
             fid = fopen(fIn,'r');
             data = fread(fid,'float32');
