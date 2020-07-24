@@ -23,7 +23,6 @@ load(fil,'q')
 qq=q;
 numimbin=zeros(1,nClass);
 indsinbin=cell(1,nClass);
-indsinbin(1,:)={0};
 %
             
 
