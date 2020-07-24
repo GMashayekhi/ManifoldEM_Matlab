@@ -65,12 +65,12 @@ switch pcase
                     else
                         tauind= find((tau>=ind1) & (tau<ind2));
                     end
-                    while (isempty(tauind))
-                        sc = 1/(nClass*2);
-                        ind1 = ind1 - sc*ind1;
-                        ind2 = ind2+sc*ind2;
-                        tauind = find((tau>=ind1)&(tau<ind2));
-                    end
+                %    while (isempty(tauind))
+                %        sc = 1/(nClass*2);
+                %        ind1 = ind1 - sc*ind1;
+                %        ind2 = ind2+sc*ind2;
+                %        tauind = find((tau>=ind1)&(tau<ind2));
+                %    end
                     indsinbin{bin}=[indsinbin{bin};ind(posPsi(tauind))];
                     
                     
