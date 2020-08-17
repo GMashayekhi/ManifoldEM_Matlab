@@ -5,7 +5,7 @@ ManifoldEM is a stand-alone MATLAB program to extract continuous conformational 
 
 1.	Dashti, A. et al. Trajectories of the ribosome as a Brownian nanomachine. Proc Natl Acad Sci U S A 111, 17492-7 (2014).
 2.	Dashti, A. & Mashayekhi, G. et al. Retrieving Functional Pathways of Biomolecules 
-from Single-particle Snapshots. Nature Communication, (2020). (Under review)
+from Single-particle Snapshots. Nature Communication, (2020). (accepted)
 
 If ManifoldEM is useful in your work, please cite the papers 1 & 2.
 
