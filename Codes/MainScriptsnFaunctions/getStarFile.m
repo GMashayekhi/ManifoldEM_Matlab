@@ -20,7 +20,7 @@ end
 
 headlines=size(name,1);
 
-for i=1:headlines-3
+for i=1:headlines
     f=fopen(filename);
     x=textscan(f, [repmat('%*s ',1,i-1),'%s ',repmat('%*s ',1,headlines-i+1)],'headerlines', headlines+2); %1
     varname = genvarname(name{i});
