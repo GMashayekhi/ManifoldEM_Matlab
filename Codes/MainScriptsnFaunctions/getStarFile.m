@@ -17,7 +17,8 @@ for i=1:size(UserGuide{1,1},1)
         name{i,1}=UserGuide{1,1}{i,1}(1:find(UserGuide{1,1}{i,1}=='#')-1);
     end
 end
-
+f=cellfun(@isempty,name);
+name=name(length(find(f))+1:end);
 headlines=size(name,1);
 
 for i=1:headlines
