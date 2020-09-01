@@ -3,7 +3,7 @@ function getStarFile(filename,dir)
 % Copyright (c) 2020 UWM ManifoldEM team 
 % Developed by Ghoncheh Mashayekhi, 2017
 % gets the starfile directory+name as filename and save the information in
-% manifoldEM format
+% manifoldEM format in dir
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 disp('writing star file....')
 doTrsl=0;
