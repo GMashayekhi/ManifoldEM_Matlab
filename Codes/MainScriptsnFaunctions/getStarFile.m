@@ -72,6 +72,10 @@ PixSize=(cell2mat(cellfun(@str2num,x_rlnDetectorPixelSize,'un',0)));
 
 Vol=Vol(1);Cs=Cs(1);AmpCont=AmpCont(1);PixSize=PixSize(1);
 
+if exist([dir,'/Data'],'dir')==0
+    mkdir Data
+end
+
 if exist('x_rlnOriginX','var')
     x=cell2mat(cellfun(@str2num,x_rlnOriginX,'un',0));
     y=cell2mat(cellfun(@str2num,x_rlnOriginY,'un',0));
@@ -103,9 +107,6 @@ qc = [-q(2,:);q(1,:);-q(4,:);q(3,:)];
 q = [q, qc];
 df = [df; df];
 
-if exist([dir,'/Data'],'dir')==0
-    mkdir Data
-end
 save([dir,'/Data/starFile.mat'], 'q', 'df', 'Cs', 'Vol', 'PixSize', 'AmpCont','doTrsl')
 
 disp('done!')
