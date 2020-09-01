@@ -19,7 +19,6 @@ for i=1:size(UserGuide{1,1},1)
 end
 
 headlines=size(name,1);
-name=name(4:end);
 
 for i=1:headlines-3
     f=fopen(filename);
