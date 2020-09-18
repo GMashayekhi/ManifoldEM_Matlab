@@ -4,8 +4,7 @@ ManifoldEM 1.0.0
 ManifoldEM is a stand-alone MATLAB program to extract continuous conformational changes from single-particle cryo-electron microscopy data. It is developed in the Ourmazd research group at the University of Wisconsin Milwaukee (UWM) (https://sites.uwm.edu/ourmazd/). The underlying methodology with application to different experimental datasets is described in the following publications. 
 
 1.	Dashti, A. et al. Trajectories of the ribosome as a Brownian nanomachine. Proc Natl Acad Sci U S A 111, 17492-7 (2014).
-2.	Dashti, A. & Mashayekhi, G. et al. Retrieving Functional Pathways of Biomolecules 
-from Single-particle Snapshots. Nature Communication, (2020). (accepted)
+2.	Dashti, A., Mashayekhi, G., Shekhar, M. et al. Retrieving functional pathways of biomolecules from single-particle snapshots. Nat Commun 11, 4734 (2020). 
 
 If ManifoldEM is useful in your work, please cite the papers 1 & 2.
 
