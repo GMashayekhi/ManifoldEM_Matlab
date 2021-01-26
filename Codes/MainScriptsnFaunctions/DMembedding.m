@@ -1,7 +1,7 @@
 function [eigVal,psi,sigma,mu] = DMembedding(D,tune)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Copyright (c) 2020 UWM ManifoldEM team 
-% Adopted from Giannakis, modifieid by Ali Dashti, 2017, Ghoncheh Mashayekhi
+% Adopted from Russell Fung, modifieid by Ali Dashti, 2017, Ghoncheh Mashayekhi
 % 2020
 % 
 % Does the embedding
