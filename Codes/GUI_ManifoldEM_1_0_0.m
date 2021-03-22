@@ -719,10 +719,12 @@ switch  get(handles.check_parclust,'Value')
             ind = CG{prD};
             if ~isempty(ind)
                 isSel.sense=slcPsinums(prD,2);
-                psiAnalysis([handles.ManifoldEMdir,'/Dist/IMGs_prD',num2str(prD),'.mat'],...
+                if isSel.sense~=0
+                    psiAnalysis([handles.ManifoldEMdir,'/Dist/IMGs_prD',num2str(prD),'.mat'],...
                     [handles.ManifoldEMdir,'/EM/EM_prD',num2str(prD),'.mat'],...
                     [handles.ManifoldEMdir,'/NLSA'],['/NLSA_prD',num2str(prD)],ConCoef,slcPsinums(prD,1),isSel,mask)
                 prD
+                end
             end
         end
     case 1
@@ -743,9 +745,11 @@ switch  get(handles.check_parclust,'Value')
                 ind = CG{prD};
                 if ~isempty(ind)
                     isSel.sense=slcPsinums(prD,2);
-                    obj = createTask(job, @psiAnalysis, 0, {[handles.ManifoldEMDirClust,'/Dist/IMGs_prD',num2str(prD),'.mat'],...
+                    if isSel.sense~=0                   
+                        obj = createTask(job, @psiAnalysis, 0, {[handles.ManifoldEMDirClust,'/Dist/IMGs_prD',num2str(prD),'.mat'],...
                         [handles.ManifoldEMDirClust,'/EM/EM_prD',num2str(prD),'.mat'],...
                         [handles.ManifoldEMDirClust,'/NLSA'],['/NLSA_prD',num2str(prD)],ConCoef,slcPsinums(prD,1),isSel,mask});
+                    end
                 end
             end
             submit(job)
