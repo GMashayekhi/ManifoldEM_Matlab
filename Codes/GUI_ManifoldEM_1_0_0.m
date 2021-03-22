@@ -283,7 +283,7 @@ load([handles.ManifoldEMdir,'/Data/mrcsFile.mat'],'nPix')
 
 disp('Applying NLSA...')
 
-NoE=str2num(char(get(handles.edit_resolution,'String')));
+NoE=str2num(char(get(handles.edit_NoE,'String')));
 ConCoef=20; % equal to 5% ocncatenation order
 isSel.val=0;
 maskSize=floor(Diameter/PixSize/2)+5;
